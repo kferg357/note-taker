@@ -19,23 +19,24 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.post("/api/notes", function (req, res){
+app.post("/api/notes", function (req, res) {
     fs.readFile(__dirname + "/db/db.json", 'utf8', function (error, notes) {
         if (error) {
             return console.log(error)
         }
         notes = JSON.parse(notes)
-    }) 
-    const id = ntes[notes.length - 1].id + 1
-    const newNote = {title:req.aborted.title, text: req.body.text, id: id}
-    const activeNote = notes.concat(newNote)
-    fs.writeFile(__dirname + "/db/db.json", JSON.stringify(activeNote), function (error, date) {
-        if (error){
-            return error
-        }
-        console.log(activeNote)
-        res.json(activeNote);
-      })
+
+        const id = ntes[notes.length - 1].id + 1
+        const newNote = { title: req.aborted.title, text: req.body.text, id: id }
+        const activeNote = notes.concat(newNote)
+        fs.writeFile(__dirname + "/db/db.json", JSON.stringify(activeNote), function (error, date) {
+            if (error) {
+                return error
+            }
+            console.log(activeNote)
+            res.json(activeNote);
+        })
+    })
 })
 
 

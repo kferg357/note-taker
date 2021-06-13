@@ -40,3 +40,56 @@ app.post("/api/notes", function (req, res) {
 })
 
 
+// app.get("/api/notes", function (req, res) {
+//     fs.readFile(__dirname + "/db/db.json", 'utf8', function (error, data) {
+//         if (error) {
+//             return console.log(error)
+//         }
+//         console.log("this is Notes", data)
+//         res.json(JSON.parse(data))
+//     })
+// });
+
+// app.get("/api/notes/:id", function (req, res) {
+//     const noteId = JSON.parse(req.params.id)
+//     console.log(noteId)
+//     fs.readFile(__dirname + "/db/db.json", 'utf8', function (error, notes) {
+//         if (error) {
+//             return console.log(error)
+//         }
+//         notes =JSON.parse(notes)
+
+//         notes = notes.fliter(val => val.id !==noteId)
+
+//         fs.readFile(__dirname + "/db/db.json", JSON.stringify(notes), function (error, data) {
+//             if (error) {
+//                 return error
+//             }
+//        res.json(notes)
+//         })
+//     })
+// })
+
+// app.put("/api/notes/:id", function (req, res){
+//     const noteId = JSON.parse(req.params.id)
+//     console.log(noteId)
+//     fs.readFile(__dirname + "/db/db.json", 'utf8', function (error, notes) {
+//         if (error){
+//             return console.log(error)
+//         }
+//         notes.JSONparse(notes)
+//         notes = notes.fliter(val => val.id !== noteId)
+
+//         fs.writeFile(__dirname + "db/db.json", JSON.stringify(notes), function (error, data) {
+//             if (error) {
+//                 return error
+//             }
+//             res.json(notes)
+//         })
+//     })
+// })
+
+
+
+
+

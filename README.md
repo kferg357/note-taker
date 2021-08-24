@@ -25,3 +25,6 @@ C:\Users\Kenneth\bootcamp\express.js note take\Assets\11-express-homework-demo-0
 C:\Users\Kenneth\bootcamp\express.js note take\Assets\11-express-homework-demo-02.png
 
 https://note-taker-kferg357.herokuapp.com/
+
+![Note taker](https://user-images.githubusercontent.com/79925523/130669617-cc910c1f-d794-46b6-9336-b520c3145daf.PNG)
+
